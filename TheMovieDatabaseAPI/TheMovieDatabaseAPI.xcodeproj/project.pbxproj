@@ -36,6 +36,7 @@
 		EAA5EC11278AEC41004CFE83 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC10278AEC41004CFE83 /* UICollectionView+Extension.swift */; };
 		EAA5EC14278AFB11004CFE83 /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC12278AFB11004CFE83 /* MovieDetailVC.swift */; };
 		EAA5EC15278AFB11004CFE83 /* MovieDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA5EC13278AFB11004CFE83 /* MovieDetailVC.xib */; };
+		EAA5EC17278B28EC004CFE83 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC16278B28EC004CFE83 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		EAA5EC10278AEC41004CFE83 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		EAA5EC12278AFB11004CFE83 /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
 		EAA5EC13278AFB11004CFE83 /* MovieDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailVC.xib; sourceTree = "<group>"; };
+		EAA5EC16278B28EC004CFE83 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F70BD72D9FEA25C3A81986FA /* Pods-TheMovieDatabaseAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDatabaseAPI.release.xcconfig"; path = "Target Support Files/Pods-TheMovieDatabaseAPI/Pods-TheMovieDatabaseAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 		EA6A887F278ABE6100C32544 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EAA5EC16278B28EC004CFE83 /* Constants.swift */,
 				EA6A8880278ABE8200C32544 /* Coordinator.swift */,
 				EA6A8887278AC3CA00C32544 /* ServiceManager.swift */,
 				EA6A8885278AC23900C32544 /* BaseVC.swift */,
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6A8866278ABD6100C32544 /* ViewController.swift in Sources */,
+				EAA5EC17278B28EC004CFE83 /* Constants.swift in Sources */,
 				EAA5EC06278AE33E004CFE83 /* Disposable.swift in Sources */,
 				EAA5EC05278AE33E004CFE83 /* Observable.swift in Sources */,
 				EAA5EC00278ADF9E004CFE83 /* TvPopularVM.swift in Sources */,

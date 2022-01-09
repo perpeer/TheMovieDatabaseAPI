@@ -20,6 +20,16 @@ final class MainVC: BaseVC {
         }
     }
     
+    // MARK: - UI Properties
+    private lazy var searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.searchBar.delegate = self
+        controller.searchResultsUpdater = self
+        controller.obscuresBackgroundDuringPresentation = false
+        controller.searchBar.placeholder = "Search movies..."
+        return controller
+    }()
+    
     // MARK: - Properties
     private let viewModel = TvPopularVM()
     private var disposal = Disposal()
@@ -28,11 +38,12 @@ final class MainVC: BaseVC {
     override func setupUI() {
         super.setupUI()
         title = "Popular Movies"
+        navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.removeViewController(SplashVC.self)
         navigationItem.setHidesBackButton(true, animated: true)
         bindUI()
-        viewModel.fetchResponse()
+        viewModel.fetchPupular()
     }
     
     // MARK: - Private Functions
@@ -43,6 +54,19 @@ final class MainVC: BaseVC {
                 self.collectionView.reloadData()
             }
         }.add(to: &disposal)
+    }
+}
+
+extension MainVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        viewModel.search(with: text)
+    }
+}
+
+extension MainVC: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.fetchPupular()
     }
 }
 
