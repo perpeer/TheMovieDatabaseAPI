@@ -10,15 +10,15 @@ import UIKit
 final class Coordinator {
     static let shared = Coordinator()
 
-    func push(controller key: ControllerKey) {
+    func push(controller key: ControllerKey, animated: Bool = true) {
         guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController,
               let controller = viewController(key) else { return }
-        navController.pushViewController(controller, animated: true)
+        navController.pushViewController(controller, animated: animated)
     }
 
-    func present(controller key: ControllerKey) {
+    func present(controller key: ControllerKey, animated: Bool = true) {
         guard let controller = viewController(key) else { return }
-        UIApplication.shared.windows.first?.rootViewController?.present(controller, animated: true)
+        UIApplication.shared.windows.first?.rootViewController?.present(controller, animated: animated)
     }
 
     private func viewController(_ controllerKey: ControllerKey, data: Any? = nil) -> UIViewController? {
