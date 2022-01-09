@@ -67,6 +67,9 @@ extension MainVC: UISearchResultsUpdating {
 extension MainVC: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         viewModel.fetchPupular()
+        let topInset = collectionView.contentInset.top + view.safeAreaInsets.top
+        collectionView.setContentOffset(CGPoint(x: -collectionView.contentInset.left,
+                                                y: -topInset), animated: true)
     }
 }
 
@@ -99,6 +102,6 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        8
     }
 }
