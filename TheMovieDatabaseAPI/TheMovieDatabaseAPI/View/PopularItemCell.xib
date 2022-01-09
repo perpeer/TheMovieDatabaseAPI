@@ -33,10 +33,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFo-il-vCf">
+                                <rect key="frame" x="261.5" y="8" width="36.5" height="36.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQe-8F-9Br">
+                                        <rect key="frame" x="8" y="8" width="20.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SQe-8F-9Br" firstAttribute="top" secondItem="uFo-il-vCf" secondAttribute="top" constant="8" id="EQQ-4a-ijF"/>
+                                    <constraint firstAttribute="width" secondItem="uFo-il-vCf" secondAttribute="height" multiplier="1:1" id="HRv-nO-bxU"/>
+                                    <constraint firstAttribute="bottom" secondItem="SQe-8F-9Br" secondAttribute="bottom" constant="8" id="Xwh-fE-zMU"/>
+                                    <constraint firstItem="SQe-8F-9Br" firstAttribute="leading" secondItem="uFo-il-vCf" secondAttribute="leading" constant="8" id="ucJ-Xt-jX5"/>
+                                    <constraint firstAttribute="trailing" secondItem="SQe-8F-9Br" secondAttribute="trailing" constant="8" id="xa5-7E-Qbn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dBv-fN-xB6" secondAttribute="trailing" id="5Re-2V-uzs"/>
+                            <constraint firstItem="uFo-il-vCf" firstAttribute="top" secondItem="Vkm-Nd-2cI" secondAttribute="top" constant="8" id="BdT-Mh-790"/>
+                            <constraint firstAttribute="trailing" secondItem="uFo-il-vCf" secondAttribute="trailing" constant="8" id="DKG-GS-pTT"/>
                             <constraint firstItem="KaM-hp-1l5" firstAttribute="leading" secondItem="Vkm-Nd-2cI" secondAttribute="leading" id="KOU-Vd-htE"/>
                             <constraint firstAttribute="trailing" secondItem="7le-Ag-64O" secondAttribute="trailing" constant="8" id="MHQ-LB-00C"/>
                             <constraint firstItem="KaM-hp-1l5" firstAttribute="height" secondItem="7le-Ag-64O" secondAttribute="height" multiplier="1.5" id="P4w-Qq-cEF"/>
@@ -60,6 +86,7 @@
             <size key="customSize" width="306" height="429"/>
             <connections>
                 <outlet property="imageViewIcon" destination="dBv-fN-xB6" id="Gdr-TT-gF4"/>
+                <outlet property="labelAverage" destination="SQe-8F-9Br" id="XR6-F2-QJ4"/>
                 <outlet property="labelTitle" destination="7le-Ag-64O" id="VgF-HG-AHa"/>
             </connections>
             <point key="canvasLocation" x="317.39130434782612" y="258.81696428571428"/>

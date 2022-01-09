@@ -21,6 +21,12 @@ final class PopularItemCell: BaseCollectionCell {
             labelTitle.textColor = .white
         }
     }
+    @IBOutlet private weak var labelAverage: UILabel! {
+        didSet {
+            labelAverage.textAlignment = .center
+            labelAverage.textColor = .white
+        }
+    }
     
     // MARK: - Properties
     var viewModel: TvPopulerItemVM? {
@@ -40,14 +46,15 @@ final class PopularItemCell: BaseCollectionCell {
         guard let viewModel = viewModel else {
             return
         }
-        imageViewIcon.sd_setImage(with: viewModel.getIconUrl())
+        imageViewIcon.sd_setImage(with: viewModel.iconUrl)
         labelTitle.text = viewModel.name
-        
+        labelAverage.text = "\(viewModel.voteAverage)"
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         imageViewIcon.image = nil
         labelTitle.text = nil
+        labelAverage.text = nil
     }
 }

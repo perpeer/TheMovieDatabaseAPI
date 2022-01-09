@@ -36,17 +36,17 @@ final class TvPopularVM: BaseVM {
 }
 
 final class TvPopulerItemVM: BaseVM {
-    let name: String
-    private let posterPath: String
-    
-    init(_ item: TvPopulerItemModel) {
-        self.name = item.name ?? ""
-        self.posterPath = item.posterPath ?? ""
-    }
-    
-    func getIconUrl() -> URL? {
+    private let movie: TvPopulerItemModel
+    private var posterPath: String { movie.posterPath ?? "" }
+    var name: String { movie.name ?? "" }
+    var voteAverage: Double { movie.voteAverage ?? 0 }
+    var iconUrl: URL? {
         guard !posterPath.isEmpty,
               let url = URL(string: "https://image.tmdb.org/t/p/w400\(posterPath)") else { return nil }
         return url
+    }
+    
+    init(_ item: TvPopulerItemModel) {
+        self.movie = item
     }
 }

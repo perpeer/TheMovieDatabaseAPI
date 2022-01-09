@@ -15,5 +15,6 @@ struct TvPopularModel: Decodable {
 struct TvPopulerItemModel: Decodable {
     let name: String?
     let posterPath: String?
-    let popularity: Double?
+    let voteAverage: Double?
+    
 }
