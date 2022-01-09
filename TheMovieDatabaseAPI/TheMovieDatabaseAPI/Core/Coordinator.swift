@@ -10,14 +10,14 @@ import UIKit
 final class Coordinator {
     static let shared = Coordinator()
 
-    func push(controller key: ControllerKey, animated: Bool = true) {
+    func push(controller key: ControllerKey, data: Any? = nil, animated: Bool = true) {
         guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController,
-              let controller = viewController(key) else { return }
+              let controller = viewController(key, data: data) else { return }
         navController.pushViewController(controller, animated: animated)
     }
 
-    func present(controller key: ControllerKey, animated: Bool = true) {
-        guard let controller = viewController(key) else { return }
+    func present(controller key: ControllerKey, data: Any? = nil, animated: Bool = true) {
+        guard let controller = viewController(key, data: data) else { return }
         UIApplication.shared.windows.first?.rootViewController?.present(controller, animated: animated)
     }
 
@@ -32,11 +32,12 @@ final class Coordinator {
 }
 
 let kControllerMap: [String: (classType: AnyClass, title: String)] = [
-    ControllerKey.mainVC.rawValue: (MainVC.self, "")
+    ControllerKey.mainVC.rawValue: (MainVC.self, ""),
+    ControllerKey.movieDetailVC.rawValue: (MovieDetailVC.self, "")
 ]
 
 
 enum ControllerKey: String {
-    case splashVC = "SplashVC"
     case mainVC = "MainVC"
+    case movieDetailVC = "MovieDetailVC"
 }

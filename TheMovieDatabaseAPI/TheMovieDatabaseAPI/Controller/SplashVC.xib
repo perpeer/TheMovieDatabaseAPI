@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,17 +19,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiX-ds-DOl">
-                    <rect key="frame" x="123" y="423.5" width="168" height="59"/>
+                    <rect key="frame" x="123" y="418.5" width="168" height="59"/>
                     <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="59"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="uiX-ds-DOl" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="3b0-wz-fDg"/>
-                <constraint firstItem="uiX-ds-DOl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="x2d-PZ-5e0"/>
+                <constraint firstItem="uiX-ds-DOl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3b0-wz-fDg"/>
+                <constraint firstItem="uiX-ds-DOl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="x2d-PZ-5e0"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>

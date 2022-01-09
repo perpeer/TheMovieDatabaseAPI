@@ -55,6 +55,11 @@ extension MainVC: UICollectionViewDataSource {
         cell.viewModel = viewModel.getItem(at: indexPath.item)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewModel = viewModel.getItem(at: indexPath.item) else { return }
+        Coordinator.shared.push(controller: .movieDetailVC, data: viewModel)
+    }
 }
 
 extension MainVC: UICollectionViewDelegateFlowLayout {

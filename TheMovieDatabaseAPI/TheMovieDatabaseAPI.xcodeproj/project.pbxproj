@@ -34,6 +34,8 @@
 		EAA5EC0D278AEAD7004CFE83 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC0C278AEAD7004CFE83 /* BaseCollectionCell.swift */; };
 		EAA5EC0F278AEBED004CFE83 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC0E278AEBED004CFE83 /* Reusable.swift */; };
 		EAA5EC11278AEC41004CFE83 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC10278AEC41004CFE83 /* UICollectionView+Extension.swift */; };
+		EAA5EC14278AFB11004CFE83 /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC12278AFB11004CFE83 /* MovieDetailVC.swift */; };
+		EAA5EC15278AFB11004CFE83 /* MovieDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA5EC13278AFB11004CFE83 /* MovieDetailVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		EAA5EC0C278AEAD7004CFE83 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		EAA5EC0E278AEBED004CFE83 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		EAA5EC10278AEC41004CFE83 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		EAA5EC12278AFB11004CFE83 /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
+		EAA5EC13278AFB11004CFE83 /* MovieDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailVC.xib; sourceTree = "<group>"; };
 		F70BD72D9FEA25C3A81986FA /* Pods-TheMovieDatabaseAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDatabaseAPI.release.xcconfig"; path = "Target Support Files/Pods-TheMovieDatabaseAPI/Pods-TheMovieDatabaseAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +143,8 @@
 				EA6A8876278ABDD900C32544 /* SplashVC.xib */,
 				EA6A887B278ABE1B00C32544 /* MainVC.swift */,
 				EA6A887C278ABE1B00C32544 /* MainVC.xib */,
+				EAA5EC12278AFB11004CFE83 /* MovieDetailVC.swift */,
+				EAA5EC13278AFB11004CFE83 /* MovieDetailVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				EA6A886E278ABD6200C32544 /* LaunchScreen.storyboard in Resources */,
 				EA6A8878278ABDD900C32544 /* SplashVC.xib in Resources */,
 				EA6A886B278ABD6200C32544 /* Assets.xcassets in Resources */,
+				EAA5EC15278AFB11004CFE83 /* MovieDetailVC.xib in Resources */,
 				EA6A8869278ABD6100C32544 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +339,7 @@
 				EA6A887D278ABE1B00C32544 /* MainVC.swift in Sources */,
 				EA6A8881278ABE8200C32544 /* Coordinator.swift in Sources */,
 				EAA5EC0A278AEA7F004CFE83 /* PopularItemCell.swift in Sources */,
+				EAA5EC14278AFB11004CFE83 /* MovieDetailVC.swift in Sources */,
 				EAA5EBFA278AD8C4004CFE83 /* UIColor+Extension.swift in Sources */,
 				EA6A8886278AC23900C32544 /* BaseVC.swift in Sources */,
 				EA6A8877278ABDD900C32544 /* SplashVC.swift in Sources */,
