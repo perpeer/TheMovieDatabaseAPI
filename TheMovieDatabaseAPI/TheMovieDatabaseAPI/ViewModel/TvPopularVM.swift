@@ -40,6 +40,9 @@ final class TvPopulerItemVM: BaseVM {
     private var posterPath: String { movie.posterPath ?? "" }
     var name: String { movie.name ?? "" }
     var voteAverage: Double { movie.voteAverage ?? 0 }
+    var overviewText: String { movie.overview ?? ""}
+    var language: String { (movie.originalLanguage ?? "").uppercased() }
+    var firstAirDate: String { movie.firstAirDate ?? "" }
     var iconUrl: URL? {
         guard !posterPath.isEmpty,
               let url = URL(string: "https://image.tmdb.org/t/p/w400\(posterPath)") else { return nil }
