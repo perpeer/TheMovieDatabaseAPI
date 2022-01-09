@@ -12,6 +12,10 @@ final class MainVC: BaseVC {
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
             collectionView.backgroundColor = .clear
+            collectionView.register(PopularItemCell.self)
+            collectionView.delegate = self
+            collectionView.dataSource = self
+            collectionView.contentInset = .init(top: 8, left: 8, bottom: 8, right: 8)
         }
     }
     
@@ -22,6 +26,8 @@ final class MainVC: BaseVC {
     // MARK: - Override Fuctions
     override func setupUI() {
         super.setupUI()
+        title = "Popular Movies"
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.removeViewController(SplashVC.self)
         navigationItem.setHidesBackButton(true, animated: true)
         bindUI()
@@ -36,5 +42,33 @@ final class MainVC: BaseVC {
                 self.collectionView.reloadData()
             }
         }.add(to: &disposal)
+    }
+}
+
+extension MainVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel.itemCount
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: PopularItemCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.viewModel = viewModel.getItem(at: indexPath.item)
+        return cell
+    }
+}
+
+extension MainVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (view.frame.width - 24) / 2
+        let height = width * 1.33
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        0
     }
 }

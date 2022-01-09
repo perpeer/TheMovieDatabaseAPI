@@ -29,6 +29,11 @@
 		EAA5EC02278ADFB3004CFE83 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC01278ADFB3004CFE83 /* BaseVM.swift */; };
 		EAA5EC05278AE33E004CFE83 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC03278AE33E004CFE83 /* Observable.swift */; };
 		EAA5EC06278AE33E004CFE83 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC04278AE33E004CFE83 /* Disposable.swift */; };
+		EAA5EC0A278AEA7F004CFE83 /* PopularItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC08278AEA7F004CFE83 /* PopularItemCell.swift */; };
+		EAA5EC0B278AEA7F004CFE83 /* PopularItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA5EC09278AEA7F004CFE83 /* PopularItemCell.xib */; };
+		EAA5EC0D278AEAD7004CFE83 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC0C278AEAD7004CFE83 /* BaseCollectionCell.swift */; };
+		EAA5EC0F278AEBED004CFE83 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC0E278AEBED004CFE83 /* Reusable.swift */; };
+		EAA5EC11278AEC41004CFE83 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC10278AEC41004CFE83 /* UICollectionView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +62,11 @@
 		EAA5EC01278ADFB3004CFE83 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		EAA5EC03278AE33E004CFE83 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		EAA5EC04278AE33E004CFE83 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		EAA5EC08278AEA7F004CFE83 /* PopularItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularItemCell.swift; sourceTree = "<group>"; };
+		EAA5EC09278AEA7F004CFE83 /* PopularItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularItemCell.xib; sourceTree = "<group>"; };
+		EAA5EC0C278AEAD7004CFE83 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
+		EAA5EC0E278AEBED004CFE83 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		EAA5EC10278AEC41004CFE83 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		F70BD72D9FEA25C3A81986FA /* Pods-TheMovieDatabaseAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDatabaseAPI.release.xcconfig"; path = "Target Support Files/Pods-TheMovieDatabaseAPI/Pods-TheMovieDatabaseAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +124,7 @@
 				EA6A887F278ABE6100C32544 /* Core */,
 				EA6A8882278ABF5400C32544 /* Extensions */,
 				EA6A8879278ABDDD00C32544 /* Controller */,
+				EAA5EC07278AE9DD004CFE83 /* View */,
 				EAA5EBFB278ADE02004CFE83 /* Model */,
 				EAA5EBFC278ADE0B004CFE83 /* ViewModel */,
 				EA6A887A278ABDE500C32544 /* Support Files */,
@@ -154,6 +165,8 @@
 				EAA5EC01278ADFB3004CFE83 /* BaseVM.swift */,
 				EAA5EC04278AE33E004CFE83 /* Disposable.swift */,
 				EAA5EC03278AE33E004CFE83 /* Observable.swift */,
+				EAA5EC0E278AEBED004CFE83 /* Reusable.swift */,
+				EAA5EC0C278AEAD7004CFE83 /* BaseCollectionCell.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 				EA6A8883278ABF6000C32544 /* UIViewController+Extension.swift */,
 				EA0F26A3278AD4C100ADBB9E /* UINavigationController+Extension.swift */,
 				EAA5EBF9278AD8C4004CFE83 /* UIColor+Extension.swift */,
+				EAA5EC10278AEC41004CFE83 /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +196,15 @@
 				EAA5EBFF278ADF9E004CFE83 /* TvPopularVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAA5EC07278AE9DD004CFE83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAA5EC08278AEA7F004CFE83 /* PopularItemCell.swift */,
+				EAA5EC09278AEA7F004CFE83 /* PopularItemCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA5EC0B278AEA7F004CFE83 /* PopularItemCell.xib in Resources */,
 				EA6A887E278ABE1B00C32544 /* MainVC.xib in Resources */,
 				EA6A886E278ABD6200C32544 /* LaunchScreen.storyboard in Resources */,
 				EA6A8878278ABDD900C32544 /* SplashVC.xib in Resources */,
@@ -307,14 +331,18 @@
 				EAA5EC00278ADF9E004CFE83 /* TvPopularVM.swift in Sources */,
 				EA6A887D278ABE1B00C32544 /* MainVC.swift in Sources */,
 				EA6A8881278ABE8200C32544 /* Coordinator.swift in Sources */,
+				EAA5EC0A278AEA7F004CFE83 /* PopularItemCell.swift in Sources */,
 				EAA5EBFA278AD8C4004CFE83 /* UIColor+Extension.swift in Sources */,
 				EA6A8886278AC23900C32544 /* BaseVC.swift in Sources */,
 				EA6A8877278ABDD900C32544 /* SplashVC.swift in Sources */,
+				EAA5EC0D278AEAD7004CFE83 /* BaseCollectionCell.swift in Sources */,
 				EA6A8888278AC3CA00C32544 /* ServiceManager.swift in Sources */,
 				EA6A8884278ABF6000C32544 /* UIViewController+Extension.swift in Sources */,
 				EA0F26A4278AD4C100ADBB9E /* UINavigationController+Extension.swift in Sources */,
 				EAA5EBFE278ADE56004CFE83 /* TvPopularModel.swift in Sources */,
 				EA6A8862278ABD6100C32544 /* AppDelegate.swift in Sources */,
+				EAA5EC11278AEC41004CFE83 /* UICollectionView+Extension.swift in Sources */,
+				EAA5EC0F278AEBED004CFE83 /* Reusable.swift in Sources */,
 				EA6A8864278ABD6100C32544 /* SceneDelegate.swift in Sources */,
 				EAA5EC02278ADFB3004CFE83 /* BaseVM.swift in Sources */,
 			);

@@ -7,6 +7,8 @@
 
 final class TvPopularVM: BaseVM {
     private var response: TvPopularModel?
+    private var results: [TvPopulerItemVM] { response?.results.map { TvPopulerItemVM($0) } ?? [] }
+    var itemCount: Int { results.count }
     
     func fetchResponse() {
         setState(.loading)
@@ -23,5 +25,20 @@ final class TvPopularVM: BaseVM {
                 self.setState(.error)
             }
         }
+    }
+    
+    func getItem(at index: Int) -> TvPopulerItemVM? {
+        guard results.indices.contains(index) else { return nil }
+        return results[index]
+    }
+}
+
+final class TvPopulerItemVM: BaseVM {
+    let name: String
+    let posterPath: String
+    
+    init(_ item: TvPopulerItemModel) {
+        self.name = item.name ?? ""
+        self.posterPath = item.posterPath ?? ""
     }
 }
