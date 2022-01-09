@@ -60,7 +60,7 @@ extension MainVC: UICollectionViewDataSource {
 extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width - 24) / 2
-        let height = width * 1.33
+        let height = width * 1.43
         return CGSize(width: width, height: height)
     }
     

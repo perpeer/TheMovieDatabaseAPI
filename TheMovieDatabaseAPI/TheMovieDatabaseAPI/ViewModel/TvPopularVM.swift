@@ -5,6 +5,8 @@
 //  Created by Ekrem TAŞKIRAN on 9.01.2022.
 //
 
+import Foundation
+
 final class TvPopularVM: BaseVM {
     private var response: TvPopularModel?
     private var results: [TvPopulerItemVM] { response?.results.map { TvPopulerItemVM($0) } ?? [] }
@@ -35,10 +37,16 @@ final class TvPopularVM: BaseVM {
 
 final class TvPopulerItemVM: BaseVM {
     let name: String
-    let posterPath: String
+    private let posterPath: String
     
     init(_ item: TvPopulerItemModel) {
         self.name = item.name ?? ""
         self.posterPath = item.posterPath ?? ""
+    }
+    
+    func getIconUrl() -> URL? {
+        guard !posterPath.isEmpty,
+              let url = URL(string: "https://image.tmdb.org/t/p/w400\(posterPath)") else { return nil }
+        return url
     }
 }
