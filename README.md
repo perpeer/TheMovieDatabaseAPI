@@ -21,7 +21,7 @@ https://api.themoviedb.org/3/tv/popular?api_key={api_key}&page=1
 Movie Details;
 https://api.themoviedb.org/3/tv/287947?api_key={api_key}
 
-[main-screen]: https://github.com/perpeer/TheMovieDatabaseAPI/blob/main/previews/preview.gif?raw=true
-[display-mode]: https://github.com/perpeer/TheMovieDatabaseAPI/blob/main/previews/home.png?raw=true
-[details-screen]: https://github.com/perpeer/TheMovieDatabaseAPI/blob/main/previews/detail.png?raw=true
-[search-screen]: https://github.com/perpeer/TheMovieDatabaseAPI/blob/main/previews/search.png?raw=true
+[main-screen]: https://github.com/perpeer/TheMovieDatabaseAPI/blob/main/Previews/preview.gif?raw=true
+[display-mode]: https://github.com/perpeer/TheMovieDatabaseAPI/blob/main/Previews/home.png?raw=true
+[details-screen]: https://github.com/perpeer/TheMovieDatabaseAPI/blob/main/Previews/detail.png?raw=true
+[search-screen]: https://github.com/perpeer/TheMovieDatabaseAPI/blob/main/Previews/search.png?raw=true
