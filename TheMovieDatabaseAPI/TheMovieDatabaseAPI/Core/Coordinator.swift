@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class AppRouter {
-    static let shared = AppRouter()
+final class Coordinator {
+    static let shared = Coordinator()
 
     func push(controller key: ControllerKey) {
         guard let navController = UIApplication.shared.windows.first?.rootViewController as? UINavigationController,

@@ -7,10 +7,14 @@
 
 import UIKit
 
-final class SplashVC: UIViewController {
+final class SplashVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .magenta
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            Coordinator.shared.push(controller: .mainVC)
+        }
     }
 }
