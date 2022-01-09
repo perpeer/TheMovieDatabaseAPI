@@ -27,6 +27,8 @@
 		EAA5EBFE278ADE56004CFE83 /* TvPopularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EBFD278ADE56004CFE83 /* TvPopularModel.swift */; };
 		EAA5EC00278ADF9E004CFE83 /* TvPopularVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EBFF278ADF9E004CFE83 /* TvPopularVM.swift */; };
 		EAA5EC02278ADFB3004CFE83 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC01278ADFB3004CFE83 /* BaseVM.swift */; };
+		EAA5EC05278AE33E004CFE83 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC03278AE33E004CFE83 /* Observable.swift */; };
+		EAA5EC06278AE33E004CFE83 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA5EC04278AE33E004CFE83 /* Disposable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		EAA5EBFD278ADE56004CFE83 /* TvPopularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvPopularModel.swift; sourceTree = "<group>"; };
 		EAA5EBFF278ADF9E004CFE83 /* TvPopularVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvPopularVM.swift; sourceTree = "<group>"; };
 		EAA5EC01278ADFB3004CFE83 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		EAA5EC03278AE33E004CFE83 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		EAA5EC04278AE33E004CFE83 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 		F70BD72D9FEA25C3A81986FA /* Pods-TheMovieDatabaseAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDatabaseAPI.release.xcconfig"; path = "Target Support Files/Pods-TheMovieDatabaseAPI/Pods-TheMovieDatabaseAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +152,8 @@
 				EA6A8887278AC3CA00C32544 /* ServiceManager.swift */,
 				EA6A8885278AC23900C32544 /* BaseVC.swift */,
 				EAA5EC01278ADFB3004CFE83 /* BaseVM.swift */,
+				EAA5EC04278AE33E004CFE83 /* Disposable.swift */,
+				EAA5EC03278AE33E004CFE83 /* Observable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -296,6 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6A8866278ABD6100C32544 /* ViewController.swift in Sources */,
+				EAA5EC06278AE33E004CFE83 /* Disposable.swift in Sources */,
+				EAA5EC05278AE33E004CFE83 /* Observable.swift in Sources */,
 				EAA5EC00278ADF9E004CFE83 /* TvPopularVM.swift in Sources */,
 				EA6A887D278ABE1B00C32544 /* MainVC.swift in Sources */,
 				EA6A8881278ABE8200C32544 /* Coordinator.swift in Sources */,
